@@ -1,0 +1,60 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageConverter"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="ImageConverter.MainWindow"
+        x:Name="myMainWindow"
+        mc:Ignorable="d"
+        Title="Image Converter" Height="204" Width="488">
+    <Grid>
+
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Column="1" Grid.Row="1" Content="Image Converter" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               FontWeight="Bold" FontSize="16" Foreground="#073d94" Height="auto" Width="auto" Margin="0,0,0,0" />
+        <syncfusion:ButtonAdv Content="Choose File"  
+                              HorizontalAlignment="Left" Height="35" Label="Choose File" Margin="10,10,10,10" 
+                              Grid.Row="2" VerticalAlignment="Center" Width="145"
+                              Background="#073d94"
+                              Foreground="White"
+                             
+                              Click="GetFile_Click"
+                              
+                              />
+
+        <TextBox x:Name="pathTextBox" Grid.Column="1" Grid.Row="2" TextWrapping="NoWrap" AcceptsReturn="False" 
+                 Margin="10,10,10,10"
+                 />
+
+
+        <syncfusion:ButtonAdv Content="Convert" 
+                              HorizontalAlignment="Center" Height="35" Label="Convert" Margin="10,10,10,10" 
+                              Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Width="145"
+                              Background="#053b1f"
+                              Foreground="White"
+                              
+                              Click="Convert_Click"
+                              />
+
+
+    </Grid>
+</Window>
